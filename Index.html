@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Atharva Gaming - Explore gaming and coding content.">
+    <meta name="keywords" content="Atharva Gaming, gaming, coding, YouTube, HTML, CSS">
+    <meta name="author" content="Atharva">
+    <title>Atharva Gaming | Explore the World of Gaming</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            cursor: url('cool_cursor.png'), auto;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #FF9800;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #4CAF50, #FF5722);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 48px;
+            color: #FDD835;
+        }
+
+        header p {
+            font-size: 20px;
+            color: #E1F5FE;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #FFC107;
+            font-size: 18px;
+            padding: 10px 25px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: url('gaming_background.jpg') no-repeat center center / cover;
+            color: #ffffff;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        .hero img {
+            margin-top: 30px;
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+        }
+
+        section h2 {
+            font-size: 32px;
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            text-align: center;
+            color: #BDBDBD;
+        }
+
+        /* Latest Videos */
+        .latest-videos iframe {
+            margin: 20px 10px;
+            border: 4px solid #FF9800;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .latest-videos iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Gallery */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Comments Section */
+        #commentsSection {
+            margin-top: 20px;
+            background-color: #212121;
+            padding: 15px;
+            border-radius: 10px;
+            color: #ffffff;
+        }
+
+        .comment {
+            margin-bottom: 15px;
+        }
+
+        .comment p {
+            margin: 5px 0;
+        }
+
+        .comment hr {
+            border: 0;
+            border-top: 1px solid #4CAF50;
+        }
+
+        /* Contact Form */
+        .form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form input, .form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #FF9800;
+            border-radius: 5px;
+            background-color: #212121;
+            color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .form input:focus, .form textarea:focus {
+            outline: none;
+            box-shadow: 0 0 8px #FF9800;
+        }
+
+        .form button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #FF9800, #4CAF50);
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #9E9E9E;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #4CAF50;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Atharva Gaming</h1>
+        <p>Explore the World of Gaming and Coding</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#latestVideos">Latest Videos</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <section id="home" class="hero">
+        <h2>Welcome to Atharva Gaming</h2>
+        <p>Discover exciting content and more!</p>
+        <img src="gallery1.jpg" alt="Atharva Gaming Thumbnail">
+    </section>
+    <section id="latestVideos">
+        <h2>Latest Videos</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3GwjfUFyY6M" title="YouTube video" allowfullscreen></iframe>
+    </section>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="gallery1.jpg" alt="Gaming Image 1">
+            <img src="gallery2.jpg" alt="Gaming Image 2">
+            <img src="gallery3.jpg" alt="Gaming Image 3">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="commentsSection">
+            <h3>Messages</h3>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Atharva Gaming | All Rights Reserved</p>
+        <p>
+            Follow us on <a href="https://www.instagram.com/atharva_gaming654" target="_blank">Instagram</a>
+        </p>
+    </footer>
+    <script>
+        const form = document.getElementById('contactForm');
+        const commentsSection = document.getElementById('commentsSection');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form from reloading the page
+
+            // Get input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Create a new comment element
+            const comment = document.createElement('div');
+            comment.className = 'comment';
+            comment.innerHTML = `
+                <p><strong>${name} (${email}):</strong></p>
+                <p>${message}</p>
+                <hr>
+            `;
+
+            // Append the comment to the comments section
+            commentsSection.appendChild(comment);
+
+            // Clear the form fields
+            form.reset();
+        });
+    </script>
+</body>
+</html>
+    
+
+
+
+
+
+
+
+
+
